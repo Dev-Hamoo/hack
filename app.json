@@ -1,0 +1,72 @@
+{
+    "name": "*[×]بوت اخنراق الجلسات* [حمو](t.me/iKiiiKi) 🥷.",
+    "description": "- اختراق جلسـات [HaMo](t.me/iKiiiKi).",
+    "logo": "https://graph.org/file/84a24314f3f561d60a608.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "env": {
+      "API_ID": {
+        "description": "[ايبي ايدي](http://my.telegram.org/).",
+        "value": "12822843",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "[ايبي هاش](http://my.telegram.org/).",
+        "value": "689f3bfcefe86a6a3dffe6830baf1010",
+        "required": true
+      },
+      "BOT_TOKEN": {
+        "description": "[توكن البوت](t.me/BotFatHeR).",
+        "value": "",
+        "required": true
+      },
+      "MONGO_URL": {
+        "description": "- HaMo.",
+        "value": "",
+        "required": true
+      },
+      "SUDOERS": {
+        "description": "- ايدي المـطور 🍿.",
+        "value": "5820956681",
+        "required": true
+      },
+      "MUST_JOIN": {
+        "description": "قنـاه اشتـراك اجبـاري",
+        "value": "VIP_CREATORS",
+        "required": false
+      },
+      "DISABLED": {
+        "description": "Menu names which you want to disable, without space (Example: a b j)",
+        "value": "",
+        "required": false
+      },
+      "LOG_GROUP_ID": {
+        "description": "- ايدي الجـروب يبـدا -100 🖤.",
+        "value": "",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "basic"
+          }
+      },
+      "stack": "container"
+  }
